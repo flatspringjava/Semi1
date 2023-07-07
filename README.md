@@ -41,7 +41,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="images/mainpage.png" >
+<img src="image/semiIndex.png" >
 
 <br>
 Spring legacy Project / Maven <br>
