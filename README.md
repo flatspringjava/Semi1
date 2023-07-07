@@ -71,7 +71,7 @@ Spring, JSP, MariaDB를 활용하여 영화 예매 사이트 구현
 
 #### 저장소 복제
    ```sh
-   git clone https://github.com/yangchanyong/AWS_fullstack_semi_project.git](https://github.com/flatspringjava/Semi1.git
+   git clone https://github.com/flatspringjava/Semi1.git
    ```
 
  #### 데이터베이스 구성
@@ -83,206 +83,7 @@ Spring, JSP, MariaDB를 활용하여 영화 예매 사이트 구현
   <details>
     <summary>query</summary>  
     
-    CREATE TABLE `tbl_member` (
-      `id` varchar(500) NOT NULL COMMENT '아이디',
-      `pw` varchar(800) DEFAULT NULL COMMENT '비밀번호',
-      `name` varchar(500) DEFAULT NULL COMMENT '이름',
-      `email` varchar(500) DEFAULT NULL COMMENT '이메일',
-      `regDate` datetime DEFAULT current_timestamp() COMMENT '가입일',
-      `phone` varchar(500) DEFAULT NULL COMMENT '연락처',
-      `grantNo` bigint(20) DEFAULT 1 COMMENT '권한번호(tbl_grant)',
-      `gradeNo` bigint(20) DEFAULT 1 COMMENT '등급번호(tbl_grade)',
-      PRIMARY KEY (`id`),
-      KEY `grantNo` (`grantNo`),
-      KEY `gradeNo` (`gradeNo`),
-      CONSTRAINT `tbl_member_ibfk_3` FOREIGN KEY (`grantNo`) REFERENCES `tbl_grant` (`grantNo`),
-      CONSTRAINT `tbl_member_ibfk_4` FOREIGN KEY (`gradeNo`) REFERENCES `tbl_grade` (`gradeNo`)
-    )
-    CREATE TABLE `tbl_address` (
-      `addrNo` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '배송지번호',
-      `addr` varchar(1000) DEFAULT NULL COMMENT '주소',
-      `addrDetail` varchar(1000) DEFAULT NULL COMMENT '상세주소',
-      `id` varchar(500) DEFAULT NULL COMMENT '아이디(tbl_member)',
-      `regDate` datetime DEFAULT current_timestamp() COMMENT '배송지 등록 날짜',
-      `addrDefault` char(1) DEFAULT NULL COMMENT '배송지 상태값',
-      `addrName` varchar(1000) NOT NULL COMMENT '배송지 이름(별칭)',
-      `recipient` varchar(1000) NOT NULL COMMENT '수령인',
-      `memo` varchar(1000) DEFAULT NULL COMMENT '배송지 등록시 작성할 메모',
-      `phone` varchar(1000) NOT NULL COMMENT '수령인 전화번호',
-      PRIMARY KEY (`addrNo`),
-      KEY `id` (`id`),
-      CONSTRAINT `tbl_address_ibfk_1` FOREIGN KEY (`id`) REFERENCES `tbl_member` (`id`)
-    )
-    CREATE TABLE `tbl_board` (
-      `bno` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '글번호',
-      `title` varchar(1000) NOT NULL COMMENT '글제목',
-      `content` varchar(3000) NOT NULL COMMENT '글내용',
-      `writer` varchar(1000) NOT NULL COMMENT '작성자',
-      `regDate` datetime DEFAULT current_timestamp() COMMENT '작성일',
-      `updatedate` datetime DEFAULT current_timestamp() COMMENT '수정일',
-      `category` bigint(20) DEFAULT NULL COMMENT '카테고리',
-      `company` varchar(300) DEFAULT NULL COMMENT '회사명',
-      `addr` varchar(1000) DEFAULT NULL COMMENT '주소',
-      `email` varchar(1000) DEFAULT NULL COMMENT '이메일',
-      `id` varchar(500) DEFAULT NULL COMMENT '아이디(tbl_member)',
-      `phone` varchar(500) DEFAULT NULL COMMENT '연락처',
-      PRIMARY KEY (`bno`),
-      KEY `id` (`id`),
-      CONSTRAINT `tbl_board_ibfk_1` FOREIGN KEY (`id`) REFERENCES `tbl_member` (`id`)
-    )
-    CREATE TABLE `tbl_grade` (
-      `gradeNo` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '등급 번호',
-      `gradeName` varchar(1000) DEFAULT NULL COMMENT '등급 이름',
-      `regDate` datetime DEFAULT current_timestamp() COMMENT '등급 등록 날짜',
-      PRIMARY KEY (`gradeNo`)
-    )
-    CREATE TABLE `tbl_grant` (
-      `grantNo` bigint(20) NOT NULL COMMENT '권한부여번호',
-      `adminGrant` char(1) DEFAULT NULL COMMENT '권한(1. 관리자, 2. 매니저 3. 일반회원)',
-      `regDate` datetime DEFAULT current_timestamp() COMMENT '등록일',
-      `updatedate` datetime DEFAULT NULL COMMENT '권한 변경 일자',
-      PRIMARY KEY (`grantNo`)
-    )
-    CREATE TABLE `tbl_productcrawl` (
-      `proidx` bigint(20) NOT NULL COMMENT '상품번호',
-      `proname` varchar(1000) DEFAULT NULL COMMENT '상품명',
-      `proprice` varchar(1000) DEFAULT NULL COMMENT '상품가격',
-      `prodetail` varchar(1000) DEFAULT NULL COMMENT '상세사진',
-      `thumb` varchar(1000) DEFAULT NULL COMMENT '썸네일사진',
-      `codeMain` varchar(1000) DEFAULT NULL COMMENT '상품코드 대분류',
-      `codeMiddle` varchar(1000) DEFAULT NULL COMMENT '상품코드 중분류',
-      `codeSub` varchar(1000) DEFAULT NULL COMMENT '상품코드 소분류',
-      `regdate` datetime DEFAULT current_timestamp() COMMENT '입력일자'
-    )
-    CREATE TABLE `tbl_procode` (
-      `codeNo` bigint(20) NOT NULL COMMENT '상품코드번호',
-      `codeMainC` bigint(20) DEFAULT NULL COMMENT '상품코드 대분류',
-      `codeMiddleC` bigint(20) DEFAULT NULL COMMENT '상품번호 중분류',
-      `codeSubC` bigint(20) DEFAULT NULL COMMENT '상품번호 소분류',
-      `codeRegdate` datetime DEFAULT current_timestamp() COMMENT '등록일자',
-      PRIMARY KEY (`codeNo`)
-    )
-    CREATE TABLE `tbl_product` (
-      `proNo` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '상품코드',
-      `proName` varchar(1000) NOT NULL COMMENT '상품명',
-      `proBuyPrice` bigint(20) NOT NULL COMMENT '공급가',
-      `proSalePrice` bigint(20) NOT NULL COMMENT '판매가',
-      `proCnt` bigint(20) DEFAULT NULL COMMENT '상품수량',
-      `proCountry` varchar(1000) DEFAULT NULL COMMENT '원산지',
-      `proManf` varchar(1000) DEFAULT NULL COMMENT '제조사',
-      `proExp` varchar(1000) DEFAULT NULL COMMENT '유통기한',
-      `proRegdate` datetime DEFAULT current_timestamp() COMMENT '등록일자',
-      `codeNo` bigint(20) DEFAULT NULL COMMENT '상품코드번호(tbl_procode)',
-      PRIMARY KEY (`proNo`),
-      KEY `codeNo` (`codeNo`),
-      CONSTRAINT `tbl_product_ibfk_1` FOREIGN KEY (`codeNo`) REFERENCES `tbl_procode` (`codeNo`)
-    )
-    CREATE TABLE `tbl_payment` (
-      `payNo` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '결제번호',
-      `payCode` bigint(20) NOT NULL COMMENT '승인번호',
-      `payMethod` varchar(1000) DEFAULT NULL COMMENT '결제방식',
-      `cardCompany` varchar(1000) DEFAULT NULL COMMENT '카드사',
-      `cardNumber` varchar(1000) DEFAULT NULL COMMENT '카드번호',
-      `payBank` varchar(1000) DEFAULT NULL COMMENT '은행명',
-      `installment` varchar(100) DEFAULT NULL,
-      `payNumber` varchar(1000) DEFAULT NULL COMMENT '계좌번호',
-      `payRegdate` datetime DEFAULT current_timestamp() COMMENT '결제일자',
-      `id` varchar(500) DEFAULT NULL COMMENT '아이디(tbl_member)',
-      PRIMARY KEY (`payNo`),
-      KEY `id` (`id`),
-      CONSTRAINT `tbl_payment_ibfk_1` FOREIGN KEY (`id`) REFERENCES `tbl_member` (`id`)
-    )
-    CREATE TABLE `tbl_coupon` (
-      `couNo` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '쿠폰번호',
-      `couName` varchar(1000) DEFAULT NULL COMMENT '쿠폰이름',
-      `regDate` datetime DEFAULT current_timestamp() COMMENT '등록일',
-      `couPrice` bigint(20) DEFAULT 0,
-      PRIMARY KEY (`couNo`)
-    )
-    CREATE TABLE `tbl_coumember` (
-      `coumemberNo` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '쿠폰과 멤버의 연결번호',
-      `couNo` bigint(20) DEFAULT NULL COMMENT '쿠폰번호(tbl_coupon)',
-      `id` varchar(500) DEFAULT NULL COMMENT '아이디(tbl_member)',
-      `regDate` datetime DEFAULT current_timestamp() COMMENT '등록일자',
-      `couCnt` bigint(20) DEFAULT NULL,
-      PRIMARY KEY (`coumemberNo`),
-      KEY `couNo` (`couNo`),
-      KEY `id` (`id`),
-      CONSTRAINT `tbl_coumember_ibfk_1` FOREIGN KEY (`couNo`) REFERENCES `tbl_coupon` (`couNo`),
-      CONSTRAINT `tbl_coumember_ibfk_2` FOREIGN KEY (`id`) REFERENCES `tbl_member` (`id`)
-    )
-    CREATE TABLE `tbl_order` (
-      `orderNo` bigint(20) NOT NULL AUTO_INCREMENT,
-      `codeNo` varchar(1000) DEFAULT NULL,
-      `cartCnt` bigint(20) DEFAULT NULL,
-      `proPrice` bigint(20) DEFAULT NULL,
-      `id` varchar(500) DEFAULT NULL,
-      `coumemberNo` bigint(20) DEFAULT NULL,
-      `payNo` bigint(20) DEFAULT NULL,
-      `regDate` datetime DEFAULT current_timestamp(),
-      `addrNo` bigint(20) DEFAULT NULL,
-      PRIMARY KEY (`orderNo`),
-      KEY `id` (`id`),
-      KEY `coumemberNo` (`coumemberNo`),
-      KEY `payNo` (`payNo`),
-      KEY `tbl_order_FK` (`addrNo`),
-      CONSTRAINT `tbl_order_FK` FOREIGN KEY (`addrNo`) REFERENCES `tbl_address` (`addrNo`),
-      CONSTRAINT `tbl_order_ibfk_1` FOREIGN KEY (`id`) REFERENCES `tbl_member` (`id`),
-      CONSTRAINT `tbl_order_ibfk_2` FOREIGN KEY (`coumemberNo`) REFERENCES `tbl_coumember` (`coumemberNo`),
-      CONSTRAINT `tbl_order_ibfk_3` FOREIGN KEY (`payNo`) REFERENCES `tbl_payment` (`payNo`)
-    )
-    CREATE TABLE `tbl_review` (
-      `rno` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '리뷰 번호',
-      `content` varchar(1000) DEFAULT NULL COMMENT '리뷰 내용',
-      `writer` varchar(1000) DEFAULT NULL COMMENT '작성자',
-      `id` varchar(500) DEFAULT NULL COMMENT '아이디 (tbl_member)',
-      `regDate` datetime DEFAULT current_timestamp() COMMENT '리뷰 작성일',
-      `codeNo` bigint(20) DEFAULT NULL COMMENT '상품코드번호(tbl_product)',
-      PRIMARY KEY (`rno`),
-      KEY `codeNo` (`codeNo`),
-      KEY `tbl_review_ibfk_1` (`id`),
-      CONSTRAINT `codeNo` FOREIGN KEY (`codeNo`) REFERENCES `tbl_procode` (`codeNo`),
-      CONSTRAINT `tbl_review_ibfk_1` FOREIGN KEY (`id`) REFERENCES `tbl_member` (`id`)
-    )
-    CREATE TABLE `tbl_attach` (
-      `uuid` varchar(500) NOT NULL COMMENT '고유번호',
-      `origin` varchar(500) DEFAULT NULL COMMENT '원본이름',
-      `image` char(1) DEFAULT NULL COMMENT '이미지 여부',
-      `path` varchar(300) DEFAULT NULL COMMENT '파일 경로',
-      `bno` bigint(20) DEFAULT NULL COMMENT '게시판 글번호(tbl_board)',
-      `rno` bigint(20) DEFAULT NULL COMMENT '리뷰 번호(tbl_review)',
-      PRIMARY KEY (`uuid`),
-      KEY `bno` (`bno`),
-      KEY `rno` (`rno`),
-      CONSTRAINT `tbl_attach_ibfk_1` FOREIGN KEY (`bno`) REFERENCES `tbl_board` (`bno`),
-      CONSTRAINT `tbl_attach_ibfk_2` FOREIGN KEY (`rno`) REFERENCES `tbl_review` (`rno`)
-    )
-    CREATE TABLE `tbl_cart` (
-      `cartNo` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '장바구니 번호',
-      `cartCnt` varchar(1000) NOT NULL COMMENT '상품수량',
-      `id` varchar(500) DEFAULT NULL COMMENT '아이디(tbl_member)',
-      `codeNo` bigint(20) DEFAULT NULL COMMENT '상품번호',
-      `regDate` datetime DEFAULT current_timestamp() COMMENT '장바구니 등록 일자',
-      `proPrice` bigint(20) DEFAULT NULL COMMENT '수량*상품가격',
-      PRIMARY KEY (`cartNo`),
-      KEY `id` (`id`),
-      KEY `tbl_cart_FK` (`codeNo`),
-      CONSTRAINT `tbl_cart_FK` FOREIGN KEY (`codeNo`) REFERENCES `tbl_procode` (`codeNo`),
-      CONSTRAINT `tbl_cart_ibfk_2` FOREIGN KEY (`id`) REFERENCES `tbl_member` (`id`)
-    )
-    CREATE TABLE `tbl_statistic` (
-      `proNo` bigint(20) NOT NULL,
-      `payNo` bigint(20) NOT NULL,
-      KEY `proNo` (`proNo`),
-      KEY `payNo` (`payNo`),
-      CONSTRAINT `tbl_statistic_ibfk_1` FOREIGN KEY (`proNo`) REFERENCES `tbl_product` (`proNo`),
-      CONSTRAINT `tbl_statistic_ibfk_2` FOREIGN KEY (`payNo`) REFERENCES `tbl_payment` (`payNo`)
-    )
-    CREATE TABLE `tbl_secession` (
-      `secessionId` varchar(500) NOT NULL COMMENT '탈퇴한 회원의 id (암호화)',
-      `regdate` datetime DEFAULT current_timestamp() COMMENT '탈퇴일자',
-      PRIMARY KEY (`secessionId`)
-    )
+    
     
 
     
@@ -399,79 +200,40 @@ db.password='password'
 - [x] 작업완료 
 - [ ] 작업예정 
 
-#### 일반 회원
-- [x] 회원가입 
-  - [x] 메일 API를 이용하여 메일인증 
-  - [x] 주소 API를 이용하여 주소검색 및 입력 
+#### 회원
+- [x] 회원가입
+  - [x] 약관 동의
+  - [x] 메일 API를 이용하여 메일인증
+  - [x] BCrypt 사용하여 비밀번호 암호화 
 - [x] 로그인
-- [x] 회원상세조회
-- [x] 쿠폰조회
-- [x] 회원수정
-  - [ ] 주소 API를 이용하여 주소 검색 및 수정
-- [x] 배송지 등록, 수정, 삭제
-- [x] 리뷰 등록, 삭제
-- [x] 결제내역 조회, 삭제
-- [x] 회원탈퇴
-  - [x] 리뷰, 게시글을 '탈퇴회원'으로 처리하고 회원정보 파기
-- [x] 장바구니 수정, 삭제
-- [x] 주문
-- [x] 게시판
-  - [x] 공지사항 게시판 조회
-  - [x] 대량문의 게시판 작성, 조회
-- [x] 상품
-  - [x] 품목별조회
-  - [x] 신상품조회
-  - [x] 장바구니 추가
-  
+- [x] 마이페이지
+  - [x] 회원정보 수정
+    - [x] 휴대폰 메세지 API 이용하여 휴대폰인증
+  - [ ] 예매 확인 및 취소
+- [x] 영화 리뷰 게시판
+- [x] 예매
+  - [x] 영화선택
+  - [x] 지역선택
+  - [x] 날짜선택
+  - [x] 시간선택
+  - [ ] 좌석등급 선택
+  - [x] 좌석선택
+  - [x] 결제  
 <br>
-
-#### 매니저
-- [x] 공지사항 게시판 등록, 수정, 삭제
-- [x] 대량문의 게시판 조회, 삭제
-- [x] 상품
-  - [x] 상품 조회
-  - [ ] 상품 등록
-  - [ ] 상품 수정
-  - [ ] 상품 삭제
-- [ ] 통계
-  - [ ] 원가, 매출액, 영업이익 등 선형 차트형태로 조회
-- [x] 주문 목록
-- [x] 주문 상세
-- [x] 주문 발송 상태
-- [x] 회원등급
-  - [x] 회원등급 등록
-  - [x] 회원등급 삭제
-- [ ] 쿠폰
-  - [ ] 쿠폰 등록, 수정, 삭제
-- [x] 회원 목록
-  - [x] 회원 조회
-  - [ ] 회원 삭제
-
-<br>
-
-#### 관리자
-- [x] 권한
-  - [x] 권한 조회
-  - [x] 권한 부여
-  - [x] 권한 수정
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Collaborator
  Team Project 
  <pre>
-공통 : DB설계, 디지털 프로토 타이핑, 서류작성 (요구사항 정의서, 테이블 명세서, TEST CASE, 인터페이스 명세서 / Etc.document 참고)
+공통 : DB설계, 디지털 프로토 타이핑, 서류작성 (요구사항 정의서, 일정관리, 업무 분장, 테이블 명세서, TEST CASE, 인터페이스 명세서, 인터페이스 세부 설명)
 
-양찬용(본인) : <b>조장</b>, 게시판, 상품, 회원기능 일부(수정, 탈퇴) <a href="https://github.com/yangchanyong" target="_blank">GitHub Link</a>
+우성준 : <b>조장</b>, 영화 예매, 결제
 
-이동건 : 데이터 크롤링(<a href="https://xn--352blxn61avvg.com/">지키미 몰</a>), 장바구니, 단건구매, 결제, 구매내역 <a href="https://github.com/DGeon" target="_blank">GitHub Link</a>
+김성진 : 영화 리뷰 작성, 영화 시간선택, 날짜 선택
 
-박연재 : 리뷰, 상품, 관리자 <a href="https://github.com/yeonjae97" target="_blank">GitHub Link</a>
-
-이지윤 : 회원 <a href="https://github.com/jooneei17" target="_blank">GitHub Link</a>
-
-이창용 : 서류정리, 회의록작성 <a href="https://github.com/starping1" target="_blank">GitHub Link</a>
-
+이재원(본인) : 회원(로그인, 회원가입, 마이페이지, 로그아웃)
+	 
 </pre>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
