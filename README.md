@@ -258,7 +258,7 @@ db.password='password'
 <br>
 
 #### Digital Prototyping
-<a href="https://ovenapp.io/view/9aaHlLOD5IvM5pwGJGYgNHA5T7OIKK3J/RZBG9">Digital Prototyping Link<a/>
+<a href="https://docs.google.com/presentation/d/1IbjVC4H1NNLV3bkpN1T8uRg6Sw3itWBEv_LJMcPvDXI/edit#slide=id.g2106b4b94ac_1_70<a/>
 
 ### 프로젝트 후기
 #### 양찬용
