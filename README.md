@@ -71,7 +71,7 @@ Spring, JSP, MariaDB를 활용하여 영화 예매 사이트 구현
 
 #### 저장소 복제
    ```sh
-   git clone https://github.com/yangchanyong/AWS_fullstack_semi_project.git
+   git clone https://github.com/yangchanyong/AWS_fullstack_semi_project.git](https://github.com/flatspringjava/Semi1.git
    ```
 
  #### 데이터베이스 구성
