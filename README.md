@@ -35,7 +35,7 @@
     vcs worked on svn
     <br>
   </p>
-  <a href="semi.flatjava.co.kr" target="_blank">View Demo</a>
+  <a href="https://semi.flatjava.co.kr" target="_blank">View Demo</a>
 </div>
 
 <!-- ABOUT THE PROJECT -->
