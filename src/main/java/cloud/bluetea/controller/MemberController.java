@@ -103,9 +103,12 @@ public class MemberController {
 	public void GETmodify() {}
 	@GetMapping("mypage_remove")
 	public void GETremove() {}
-	
-	// 입력한 값들을 mypage_modify로 보냄. 이 메서드에서 service 실행
-	// 마이페이지 첫 화면
+
+	/**
+	 * 받은 회원정보를 수정 & 업데이트 하기 전 비밀번호를 암호화 테스트 완료
+	 * 입력한 값들을 mypage_modify로 보냄. 이 메서드에서 service 실행
+	 * 마이페이지 첫 화면
+	 * */
 	@PostMapping("mypage")
 	public String Postmypage(HttpServletRequest request,HttpSession session, Model model, RedirectAttributes rttr, Long tno) {
 		log.info("mypage" + "메서드에 진입");
@@ -207,7 +210,6 @@ public class MemberController {
 	 * signup.jsp의 input 란에 회원의 값이 Controller에 POST방식으로 접근하면서
 	 * Controller의 register 쿼리 메서드 실행(이때 비밀번호는 암호화 후 DB에 저장된 것을 확인) 
 	 * */
-	// 회원가입 서비스
 	@PostMapping({"signup", "signup_view"})
 	public String signupPOST(HttpServletRequest request, Member member, RedirectAttributes rttr) throws Exception {
 		log.info("POST isignup 메서드 진입");
@@ -297,10 +299,6 @@ public class MemberController {
 		int checkNum = random.nextInt(888888) + 111111;
 		log.info("인증번호 : " + checkNum);
 
-		/**
-		 * setForm은 반드시 필요. stmt설정한 계정만 보낼 수 있고 계정명은 임의로 바꿀 수 없음. gmail의 경우
-		 * 별칭기능을 통해서 바꿀 수 있음. 반드시 필요하다면 사용 예정
-		 */
 		String setForm = "nhy3533@naver.com";
 		String toMail = email;
 		String title = "회원가입 인증 이메일 입니다";
