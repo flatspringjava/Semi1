@@ -76,7 +76,7 @@ Spring, JSP, MariaDB를 활용하여 영화 예매 사이트 구현
 
  #### 데이터베이스 구성
 
-  <img alt="ERD" src="images/ERD.png" width="500">
+  <img alt="ERD" src="image/ERD.png" width="500">
 
  #### 데이터베이스 테이블 생성 쿼리
   
