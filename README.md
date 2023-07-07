@@ -23,7 +23,7 @@
 <br />
 <div align="center">
   <a href="https://https://semi.flatjava.co.kr/" target="_blank">
-    <img src="images/logo.png" alt="Logo" width="200">
+    <img src="image/logo.png" alt="Logo" width="200">
   </a>
 
   <h3 align="center">영화 예매 사이트</h3>
