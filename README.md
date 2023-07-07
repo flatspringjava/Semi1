@@ -22,7 +22,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://pf3.chanyongyang.com/" target="_blank">
+  <a href="https://https://semi.flatjava.co.kr/" target="_blank">
     <img src="images/logo.png" alt="Logo" width="200">
   </a>
 
