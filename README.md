@@ -26,80 +26,17 @@
     <img src="images/logo.png" alt="Logo" width="200">
   </a>
 
-  <h3 align="center">푸드得</h3>
+  <h3 align="center">영화 예매 사이트</h3>
 
   <p align="center">
-    Spring Legacy Project를 활용하여 사용자의 상품 구매 시 필요한 전자상거래 구현
+    Spring Legacy Project를 활용한 영화 좌석 예매 사이트
     <br>
     <p>작업기간 : 2023.03.24~2023.04.26</p>
     vcs worked on svn
     <br>
   </p>
-  <a href="https://pf3.chanyongyang.com/" target="_blank">View Demo</a>
+  <a href="semi.flatjava.co.kr" target="_blank">View Demo</a>
 </div>
-
-
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>목차</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#사전준비">사전준비</a></li>
-        <li><a href="#저장소 복제">저장소 복제</a></li>
-        <li><a href="#데이터베이스 구성">데이터베이스 구성</a></li>
-        <li><a href="#데이터베이스 테이블 생성 쿼리">데이터베이스 테이블 생성 쿼리</a></li>
-        <li><a href="#데이터베이스 연결">데이터베이스 연결</a></li>
-        <li><a href="#설치">설치</a></li>
-        <li><a href="#Web Data Crawling">Web Data Crawling</a></li>
-      </ul>
-    </li>
-    <li>
-	<a href="#사용방법 및 기능소개">사용방법 및 기능소개</a>
-	  <ul>
-   		<li><a href="#기능소개">기능소개</a></li>
-		<li><a href="#사용방법">사용방법</a></li>
-	  </ul>
-    </li>
-    <li><a href="#요구사항">요구사항</a></li>
-    <li><a href="#Team">Collaborator</a></li>
-    <li>
-	    <a href="#Etc">Etc..</a>
-	    <ul>
-		    <li><a href="#작업서류">작업서류</a></li>
-		    <li><a href="#PPT">PPT</a></li>
-		    <li><a href="#Digital Prototyping">Digital Prototyping</a></li>
-		    <li>
-              <a href="#프로젝트 후기">프로젝트 후기</a>
-              <ul>
-                <li><a href="#양찬용">양찬용</a></li>
-                <li><a href="#이동건">이동건</a></li>
-                <li><a href="#이지윤">이지윤</a></li>
-                <li><a href="#박연재">박연재</a></li>
-                <li><a href="#이창용">이창용</a></li>
-              </ul>
-            </li>
-	    </ul>
-    </li>
-    <li><a href="#Contact">Contact</a></li>
-    <li>
-	    <a href="#Acknowledgments">Acknowledgments</a>
-	    <ul>
-		    <li><a href="#References">References</a></li>
-	    </ul>
-    </li>
-  </ol>
-</details>
-
-
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -109,7 +46,7 @@
 <br>
 Spring legacy Project / Maven <br>
 학원 세미프로젝트 <br>
-Spring, JSP, MariaDB를 활용하여 식자재 쇼핑몰 구현
+Spring, JSP, MariaDB를 활용하여 영화 예매 사이트 구현
 
 
 ### Built With
