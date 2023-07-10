@@ -9,7 +9,6 @@
 -->
 
 
-
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -220,66 +219,45 @@ db.password='password'
 
 <details>
 <summary>PPT Images</summary>
-<img src="images/ppt/1.png">
+<img src="image/ppt.jpg">
 
 </details>
 
 <br>
 
 #### Digital Prototyping
-<a href="https://docs.google.com/presentation/d/1IbjVC4H1NNLV3bkpN1T8uRg6Sw3itWBEv_LJMcPvDXI/edit#slide=id.g2106b4b94ac_1_70<a/>
+<a href="https://docs.google.com/presentation/d/1IbjVC4H1NNLV3bkpN1T8uRg6Sw3itWBEv_LJMcPvDXI/edit#slide=id.g2106b4b94ac_0_0<a/>
 
 ### 프로젝트 후기
-#### 양찬용
+#### 우성준
 <pre>
-저는 회의와 서류에 중점을 두고 프로젝트를 진행했습니다. 
-팀원 한 명 한 명이 도태되는 일 없이 프로젝트를 진행하기 위해 
-매일 오전에 회의하여 진행도, 서류작업 등 보고를 받았고, 
-학원이 끝나는 시간엔 일일업무보고를 디스코드에 올려 서로 업무가 얼마나 
-진행되었는지 보고를 받았고, 저 또한 팀원들에게 보고를 했습니다. 
-그 결과 서로 막힌 부분이 있거나 시간 관계상 빨리 끝내야 하는 일이 생길 때
-던 일을 멈추고 팀원을 도와줘야 되는 경우에도 서로 막힘없이 프로젝트를 진행했고, 
-즐겁게 프로젝트를 끝낼 수 있었습니다. 
+먼저 많이 부족한 조장이지만 조원들이 포기하지 않고 따라와줘서 감사했습니다. 여기까지 올 수 있었던 건 순전히 조원들 덕분이었다고 생각합니다​
 
+학생의 입장에서는 스프링을 학교에서도 배우지 않아서 몹시 어려웠지만 선생님과 다른 학우분들의 도움으로 스프링을 조금 알 수 있었던 시간이었습니다.​
 
-위 프로젝트를 진행하며 아쉬웠던 점은 시간 관계상 구현하지 못한 
-일부 관리자 기능(통계,   실시간 상담, 상품 등록 및 수정 등)입니다. 
-프로젝트 설계 단계에서는 많은 관리자 기능이 있었고, 
-첫 번째 프로젝트에서 맡았던 일을 똑같이 다시 맡으면 
-관리자 기능을 많이 작업할 수 있었지만, 팀원 모두 실력 향상을 위해 
-모두 첫 프로젝트와 다른 작업을 하길 원했고 저 또한 그렇게 하길 원했습니다. 
-비록 일부 기능을 구현하지 못해서 아쉬웠지만 
-다들 큰 폭으로 실력 향상이 되어서 만족스러운 프로젝트였습니다.
+​
+
+다만, 트랙잭션 같은 예매에서 중요한 작업들을 미쳐 해내지 못한 것이 아쉽지만, 복습의 기회로 삼아 앞으로 나아가려고 합니다.​
 </pre>
 
-#### 이동건
+#### 김성진
 <pre>
-Spring이 무엇인지도 모르고 프로젝트를 시작했지만 
-Controller와 Service, DTO, Mapper등을 사용해보면서 왜 써야하는지, 
-왜 필요한지를 알게 되었고, 비동기 처리 또한 많은 부분에서 필요한 것들이 많았으며, 
-팀원들과 협동을 통해 프로젝트에 재미를 더 붙일 수 있어서 좋은 시간이었습니다. 
-</pre>
-#### 이지윤
-<pre>
-서류 작업부터 여러 가지 툴을 사용하는 프로젝트는 처음이라 
-그 과정에서 겪은 어려운 점도 많았지만 프로젝트 덕분에 
-스프링과 DB등의 툴 사용이 전보다 익숙해질 수 있었습니다.
-</pre>
-#### 박연재
-<pre>
-팀원들과 협력과 강사님의 피드백으로 기능, 
-화면 면에서 배울 점들이 많았고, 
-코드를 작성하면서 서류도 동시에 작업해야한다는 것과 
-그와 동시에 서로 간의 피드백과 의사소통이 엄청 중요하다라는 것을 
-프로젝트를 통해 실감하게 되었습니다.
-</pre>
-#### 이창용
-<pre>
-ppt 템플릿 조사, 부트스트랩 템플릿 조사, 일일 회의록 주간 회의록 작성 등등 
-맡은 업무에 대해 열심히 실천하였고 마음 한편으론 아쉬움이 남았다
-</pre>
+프로젝트를 진행 하면서 몰랐던 기능구현을 자연스럽게 공부하게 되었고 특히 Spring 등 각각의 프로그램 등을 이용하여 설계부터 구현까지 모든 것을 한번씩 해본 것에 대해  한층 더 성장할 수 있는 계기가 되었습니다.​
 
+​
 
+세미프로젝트로서 하기엔 많은 기능에 대한 구현의 어려움이 있었지만 포기하지 않는 열정을 배울 수 있어서 좋은 경험이 되었다고 생각합니다. ​
+</pre>
+#### 이재원
+<pre>
+이번 세미 프로젝트 진행 중 사용했던 개발도구들의 기초지식이나 구현 능력이 부족했으나 사용자에 대한 기능 구현을 하면서 부족했던 점을 보완할 수 있었다고 생각합니다. ​
+
+그리고 이전에 팀원들의 배려가 있었기 때문에 구현에 대해 집중할 수 있었습니다. ​
+
+​
+
+하지만 구현 시간을 단축하려 노력했으나 그러지 못해 다음에는 구현 능력을 높여 팀원들이 덜 고생하도록 노력해야겠다고 생각 했습니다.
+</pre>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -289,11 +267,11 @@ ppt 템플릿 조사, 부트스트랩 템플릿 조사, 일일 회의록 주간 
 <!-- CONTACT -->
 ## Contact
 
-Yang Chanyong - cksdyd93@gmail.com
+Lee JaeWon - wodnjsdl01@@gmail.com
 
-<a href="https://pf3.chanyongyang.com" target="_blank">Demo Link</a>
+<a href="https://semi.flatjava.co.kr/" target="_blank">Demo Link</a>
 
-<a href="https://www.chanyongyang.com" target="_blank">Portfolio Link</a>
+<a href="https://portfolio.flatjava.co.kr/" target="_blank">Portfolio Link</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -302,14 +280,12 @@ Yang Chanyong - cksdyd93@gmail.com
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-이 프로젝트를 사용해주시고 README를 읽어주신 여러분께 대단히 감사합니다!
+읽어주셔서 감사합니다 더욱더 노력하겠습니다!
 
 ### References
 README Template : [README-Template](https://github.com/othneildrew/Best-README-Template)<br>
-Data Crawling : [지키미몰](https://xn--352blxn61avvg.com/)<br>
-Reference : [식자재왕](https://www.ewangmart.com/main/index.do?utm_source=google&utm_medium=sa&utm_campaign=sa_google_pc&utm_content=%EB%A9%94%EC%9D%B8_%EB%B8%8C%EB%9E%9C%EB%93%9C&utm_term=%EC%8B%9D%EC%9E%90%EC%9E%AC%EC%99%95&gad=1&gclid=Cj0KCQjwnf-kBhCnARIsAFlg490cNtHom16NNcR-4PXQOPzO6mPCudFADp0KuDsg63amSdgAijsBm5QaAsh6EALw_wcB)<br>
-Reference : [씨엔푸드몰](https://seanfoodmall.com/)<br>
-
+Data Crawling : [CGV](https://www.cgv.co.kr/)<br>
+Reference : [메가박스](https://www.megabox.co.kr/)<br>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
