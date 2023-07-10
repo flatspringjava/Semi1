@@ -50,7 +50,7 @@ Spring, JSP, MariaDB를 활용하여 영화 예매 사이트 구현
 
 
 ### Built With
-<img src="https://img.shields.io/badge/jsp-white?style=flat&logo=jsp&logoColor=black"/><img src="https://img.shields.io/badge/javascript-F7DF1E?style=flat&logo=javascript&logoColor=black"/><img src="https://img.shields.io/badge/jquery-0868AB?style=flat&logo=jquery&logoColor=white"/> <img src="https://img.shields.io/badge/Bootstrap5-magenta?style=flat&logo=Bootstrap&logoColor=black"/><br>
+<img src="https://img.shields.io/badge/jsp-white?style=flat&logo=jsp&logoColor=black"/><img src="https://img.shields.io/badge/javascript-F7DF1E?style=flat&logo=javascript&logoColor=black"/><img src="https://img.shields.io/badge/jquery-0868AB?style=flat&logo=jquery&logoColor=white"/> <img src="https://img.shields.io/badge/Bootstrap3-magenta?style=flat&logo=Bootstrap&logoColor=black"/><br>
 <img src="https://img.shields.io/badge/Java-white?style=flat&logo=java&logoColor=white"/>
 <img src="https://img.shields.io/badge/Spring-green?style=flat&logo=spring&logoColor=white"/>
 <img src="https://img.shields.io/badge/Mybatis-red?style=flat&logo=Mybatis&logoColor=white"/><br>
@@ -211,48 +211,17 @@ db.password='password'
 <a href="https://docs.google.com/spreadsheets/d/1QOmjC81M1BU16yphY2MsAejwuItjSuybFfhTsvnI_6Q/edit#gid=1535322908">
   요구사항 정의서, 일정관리, test case, 테이블 명세서, 인터페이스 명세서 등
 </a>
-<img src="images/document.png"> <br>
+<img src="image/requirements.png"> <br>
 위 링크 이동시 하단 sheet를 클릭하여 서류 이동할 수 있음
 
 <br>
 
 #### PPT
 
-<a href="https://www.canva.com/design/DAFgzktHeAY/UTyodLZXtAGB1K2k8WMEqw/view?utm_content=DAFgzktHeAY&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel">PPT Link</a>
-
 <details>
 <summary>PPT Images</summary>
 <img src="images/ppt/1.png">
-<img src="images/ppt/2.png">
-<img src="images/ppt/3.png">
-<img src="images/ppt/4.png">
-<img src="images/ppt/5.png">
-<img src="images/ppt/6.png">
-<img src="images/ppt/7.png">
-<img src="images/ppt/8.png">
-<img src="images/ppt/9.png">
-<img src="images/ppt/10.png">
-<img src="images/ppt/11.png">
-<img src="images/ppt/12.png">
-<img src="images/ppt/13.png">
-<img src="images/ppt/14.png">
-<img src="images/ppt/15.png">
-<img src="images/ppt/16.png">
-<img src="images/ppt/17.png">
-<img src="images/ppt/18.png">
-<img src="images/ppt/19.png">
-<img src="images/ppt/20.png">
-<img src="images/ppt/21.png">
-<img src="images/ppt/22.png">
-<img src="images/ppt/23.png">
-<img src="images/ppt/24.png">
-<img src="images/ppt/25.png">
-<img src="images/ppt/26.png">
-<img src="images/ppt/27.png">
-<img src="images/ppt/28.png">
-<img src="images/ppt/29.png">
-<img src="images/ppt/30.png">
-<img src="images/ppt/31.png">
+
 </details>
 
 <br>
