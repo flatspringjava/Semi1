@@ -208,7 +208,7 @@ db.password='password'
 <!-- LICENSE -->
 ## Etc
 #### 작업 서류
-<a href="https://docs.google.com/spreadsheets/d/1vR_ndYQ9Qo1sNOTPU-IdHNJidZm6kdvIH_R9J21spFo/edit?usp=sharing">
+<a href="https://docs.google.com/spreadsheets/d/1QOmjC81M1BU16yphY2MsAejwuItjSuybFfhTsvnI_6Q/edit#gid=1535322908">
   요구사항 정의서, 일정관리, test case, 테이블 명세서, 인터페이스 명세서 등
 </a>
 <img src="images/document.png"> <br>
