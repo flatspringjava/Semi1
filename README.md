@@ -219,14 +219,14 @@ db.password='password'
 
 <details>
 <summary>PPT Images</summary>
-<img src="image/ppt.jpg">
+<img src="image/ppt.jpg" alt="">
 
 </details>
 
 <br>
 
 #### Digital Prototyping
-<a href="https://docs.google.com/presentation/d/1IbjVC4H1NNLV3bkpN1T8uRg6Sw3itWBEv_LJMcPvDXI/edit#slide=id.g2106b4b94ac_0_0<a/>
+<a href="https://docs.google.com/presentation/d/1IbjVC4H1NNLV3bkpN1T8uRg6Sw3itWBEv_LJMcPvDXI/edit#slide=id.g2106b4b94ac_0_0"><a/>
 
 ### 프로젝트 후기
 #### 우성준
